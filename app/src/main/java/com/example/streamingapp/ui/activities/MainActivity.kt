@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     private val adapter by FilterUserItemAdapter.getAdapter { selectedItem ->
         userFilterDialog?.dismiss()
         Toast.makeText(this, selectedItem.category, Toast.LENGTH_SHORT).show()
-//        AppProgressUtils(this).showProgressOrHideIt(true)
+        AppProgressUtils(this).showProgressOrHideIt(true)
     }
 
     val categoryList = listOf<TestimonyCategory>(
@@ -56,7 +56,6 @@ class MainActivity : AppCompatActivity() {
 
         awardBtn.setOnClickListener {
             startActivity(Intent(this@MainActivity, AwardActivity::class.java))
-            Toast.makeText(this@MainActivity, "Navigate to award screen", Toast.LENGTH_SHORT).show()
         }
 
     }

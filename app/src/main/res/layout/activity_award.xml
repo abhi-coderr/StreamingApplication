@@ -12,5 +12,50 @@
         android:layout_height="match_parent"
         tools:context=".ui.activities.AwardActivity">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/custom_tool_bar_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/theme_color"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="@id/screenLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/screenLabel"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/screenLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@drawable/gradient_name"
+                android:fontFamily="@string/font_family_black"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/award_gallery"
+                android:textAlignment="textStart"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/award_rv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/custom_tool_bar_gallery"
+            tools:listitem="@layout/raw_award_gallery_item_layout" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

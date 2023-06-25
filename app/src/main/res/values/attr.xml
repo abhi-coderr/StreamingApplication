@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomTextView">
+        <attr name="font_name">
+            <enum name="regular" value="1" />
+            <enum name="light" value="2" />
+            <enum name="medium" value="3" />
+            <enum name="semibold" value="4" />
+            <enum name="bold" value="5" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CustomEditTextView">
+        <attr name="field_type" format="integer" />
+        <attr name="error_message" format="string" />
+        <attr name="comparison_field" format="reference" />
+        <attr name="space_disabled" format="boolean" />
+        <attr name="max_number_of_digits" format="integer" />
+        <attr name="error_field" format="reference" />
+        <attr name="password_eye_image_field" format="reference" />
+
+    </declare-styleable>
+</resources>
