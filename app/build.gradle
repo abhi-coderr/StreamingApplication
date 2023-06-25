@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -53,4 +54,10 @@ dependencies {
      ****************************************************************/
     implementation 'com.intuit.ssp:ssp-android:1.1.0'
     implementation 'com.intuit.sdp:sdp-android:1.1.0'
+
+    /*************************************************************
+     *  Lottie Animation
+     *************************************************************/
+    implementation 'com.airbnb.android:lottie:3.4.0'
+
 }
