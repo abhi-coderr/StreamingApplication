@@ -3,6 +3,7 @@
     <string name="testimonies">Testimony Player</string>
     <string name="category">Category :</string>
     <string name="details">Details :</string>
+    <string name="nullValue">--</string>
 
     <!--new-->
     <string name="exit_dialog_title">Do you want to exit the application?</string>

@@ -5,6 +5,10 @@
 
     <data>
 
+        <variable
+            name="testimonyData"
+            type="com.example.streamingapp.data.model.adapteritemlist.TestimonyListItem" />
+
     </data>
 
     <RelativeLayout
@@ -21,6 +25,7 @@
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/imgView"
+                loadImageUsingGlide="@{testimonyData.url}"
                 android:layout_width="@dimen/_130sdp"
                 android:layout_height="@dimen/_100sdp"
                 android:src="@drawable/normal_test_img"
@@ -48,14 +53,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_5sdp"
-                android:text="Back Pain"
+                android:text="@{testimonyData.category.empty?(@string/nullValue):testimonyData.category}"
                 android:textAlignment="textStart"
                 android:textColor="@color/bold_blue"
                 android:textSize="@dimen/_10sdp"
                 android:textStyle="normal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/imgView"
-                app:layout_constraintTop_toBottomOf="@id/category_label" />
+                app:layout_constraintTop_toBottomOf="@id/category_label"
+                tools:text="Back Pain" />
 
             <TextView
                 android:id="@+id/Detail_label"
@@ -78,14 +84,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_5sdp"
-                android:text="This is the best back pain result of our therapy."
+                android:text="@{testimonyData.detail.empty?(@string/nullValue):testimonyData.detail}"
                 android:textAlignment="textStart"
                 android:textColor="@color/bold_blue"
                 android:textSize="@dimen/_10sdp"
                 android:textStyle="normal"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.076"
                 app:layout_constraintStart_toEndOf="@id/imgView"
-                app:layout_constraintTop_toBottomOf="@id/Detail_label" />
+                app:layout_constraintTop_toBottomOf="@id/Detail_label"
+                tools:text="This is the best back pain result of our therapy." />
 
             <TextView
                 android:layout_width="0dp"

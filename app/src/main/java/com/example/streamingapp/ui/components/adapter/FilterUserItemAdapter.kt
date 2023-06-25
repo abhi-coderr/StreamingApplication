@@ -8,7 +8,6 @@ import com.example.streamingapp.utils.CustomAdapter
 import com.example.streamingapp.utils.setSafeOnClickListener
 
 object FilterUserItemAdapter {
-
     fun getAdapter(doSomethingAfterCheckListUpdate: (selectedItem: TestimonyCategory) -> Unit) =
         lazy {
             CustomAdapter<TestimonyCategory, FilterCategoryItemLayoutBinding>(
