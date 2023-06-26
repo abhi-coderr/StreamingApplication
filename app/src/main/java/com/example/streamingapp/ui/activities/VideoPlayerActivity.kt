@@ -24,7 +24,7 @@ class VideoPlayerActivity : AppCompatActivity() {
 
         binding.playerView.player = player
         // Set the media source for the player
-        val mediaItem = MediaItem.fromUri("https://firebasestorage.googleapis.com/v0/b/admin-yogeshwar.appspot.com/o/Files%2FJay%20Yogeshwar%202.mp4?alt=media&token=c074ce85-801c-43e3-b158-856d1128837e")
+        val mediaItem = MediaItem.fromUri("https://firebasestorage.googleapis.com/v0/b/admin-yogeshwar.appspot.com/o/Files%2Fknee%20pain.mp4?alt=media&token=d2df1a1c-da58-4d42-a1fb-3f18dfcbad9b")
         player?.setMediaItem(mediaItem)
 
         // Prepare and start the player
