@@ -65,4 +65,9 @@
     <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
         <item name="cornerSize">@dimen/_18sdp</item>
     </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50PercentBottom" parent="">
+        <item name="android:bottomLeftRadius">@dimen/_18sdp</item>
+        <item name="android:bottomRightRadius">@dimen/_18sdp</item>
+    </style>
 </resources>
