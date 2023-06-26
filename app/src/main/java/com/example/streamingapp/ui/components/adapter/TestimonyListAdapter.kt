@@ -2,21 +2,30 @@ package com.example.streamingapp.ui.components.adapter
 
 import com.example.streamingapp.R
 import com.example.streamingapp.data.model.adapteritemlist.TestimonyListItem
+import com.example.streamingapp.databinding.RawTestimonyItemBestBinding
+import com.example.streamingapp.databinding.RawTestimonyItemBinding
 import com.example.streamingapp.databinding.RawTestimonyItemNewBinding
 import com.example.streamingapp.utils.CustomAdapter
 import com.example.streamingapp.utils.setSafeOnClickListener
 
 object TestimonyListAdapter {
-    fun getTestimonyAdapter(onShareListener: (item: TestimonyListItem) -> Unit = {}) = lazy {
-        CustomAdapter<TestimonyListItem, RawTestimonyItemNewBinding>(
-            layoutResource = R.layout.raw_testimony_item_new,
+    fun getTestimonyAdapter(onWatch: (item: TestimonyListItem) -> Unit = {}) = lazy {
+        CustomAdapter<TestimonyListItem, RawTestimonyItemBestBinding>(
+            layoutResource = R.layout.raw_testimony_item_best,
             onBind = { binding, item, _ ->
                 binding.apply {
                     testimonyData = item
 
-                    shareBtn.setSafeOnClickListener {
-                        onShareListener.invoke(item)
+                    watchVideoBtn.setSafeOnClickListener {
+                        onWatch.invoke(item)
                     }
+
+//
+
+
+//                    shareBtn.setSafeOnClickListener {
+//                        onShareListener.invoke(item)
+//                    }
 
 //                    root.context.downloadImageFromUrl(item.image,
 //                        onSuccess = { bitmap ->

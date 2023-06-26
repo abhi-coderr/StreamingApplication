@@ -63,7 +63,7 @@
     </style>
 
     <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
-        <item name="cornerSize">@dimen/_18sdp</item>
+        <item name="cornerSize">@dimen/_5sdp</item>
     </style>
 
     <style name="ShapeAppearanceOverlay.App.CornerSize50PercentBottom" parent="">

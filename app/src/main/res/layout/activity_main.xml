@@ -10,15 +10,16 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/normal_off_white"
+        android:background="@drawable/gradient_testimony_bg"
         tools:context=".ui.activities.MainActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/custom_tool_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/theme_color"
+            android:background="#306CBD"
             android:padding="@dimen/_5sdp"
+            android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -60,14 +61,15 @@
             android:id="@+id/testimony_rv"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/custom_tool_bar"
-            tools:listitem="@layout/raw_testimony_item_new"
-            tools:visibility="gone" />
+            tools:listitem="@layout/raw_testimony_item_best"
+            tools:visibility="visible" />
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/no_data_anim"

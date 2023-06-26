@@ -14,7 +14,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/_15sdp">
+        android:layout_marginBottom="@dimen/_15sdp"
+        tools:background="@color/black">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/main_cl"
@@ -29,25 +30,26 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/normal_test_img"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
 
-            <com.google.android.material.imageview.ShapeableImageView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/title_back"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_80sdp"
                 android:background="@drawable/gradient_black_to_trans"
                 app:layout_constraintBottom_toBottomOf="@id/imgView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50PercentBottom" />
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/category_tv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_25sdp"
                 android:text="@{testimonyData.category.empty?(@string/nullValue):testimonyData.category}"
                 android:textAlignment="textStart"
                 android:textColor="@color/white"
@@ -62,7 +64,7 @@
                 android:id="@+id/details_tv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_15sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:text="@{testimonyData.detail.empty?(@string/nullValue):testimonyData.detail}"
                 android:textAlignment="textStart"
@@ -83,6 +85,7 @@
                 android:elevation="@dimen/_5sdp"
                 android:padding="@dimen/_5sdp"
                 android:src="@drawable/ic_share"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:tint="@color/theme_color" />

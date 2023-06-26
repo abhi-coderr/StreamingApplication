@@ -14,8 +14,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/_5sdp"
-        android:background="@drawable/video_item_background">
+        android:background="@color/white">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/main_cl"
@@ -26,26 +25,14 @@
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/imgView"
                 loadImageUsingGlide="@{testimonyData.url}"
-                android:layout_width="@dimen/_130sdp"
+                android:layout_width="@dimen/_150sdp"
                 android:layout_height="@dimen/_100sdp"
+                android:scaleType="centerInside"
                 android:src="@drawable/normal_test_img"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/category_label"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:text="@string/category"
-                android:textAlignment="textStart"
-                android:textColor="@color/theme_color"
-                android:textSize="@dimen/_11sdp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/imgView"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/category_tv"
@@ -55,28 +42,13 @@
                 android:layout_marginTop="@dimen/_5sdp"
                 android:text="@{testimonyData.category.empty?(@string/nullValue):testimonyData.category}"
                 android:textAlignment="textStart"
-                android:textColor="@color/bold_blue"
-                android:textSize="@dimen/_10sdp"
-                android:textStyle="normal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/imgView"
-                app:layout_constraintTop_toBottomOf="@id/category_label"
-                tools:text="Back Pain" />
-
-            <TextView
-                android:id="@+id/Detail_label"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:text="@string/details"
-                android:textAlignment="textStart"
-                android:textColor="@color/theme_color"
-                android:textSize="@dimen/_11sdp"
+                android:textColor="#0E2044"
+                android:textSize="@dimen/_15sdp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/imgView"
-                app:layout_constraintTop_toBottomOf="@id/category_tv" />
+                app:layout_constraintTop_toTopOf="@id/imgView"
+                tools:text="Back Pain" />
 
             <TextView
                 android:id="@+id/details_tv"
@@ -86,33 +58,22 @@
                 android:layout_marginTop="@dimen/_5sdp"
                 android:text="@{testimonyData.detail.empty?(@string/nullValue):testimonyData.detail}"
                 android:textAlignment="textStart"
-                android:textColor="@color/bold_blue"
-                android:textSize="@dimen/_10sdp"
+                android:textColor="#142853"
+                android:textSize="@dimen/_13sdp"
                 android:textStyle="normal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.076"
                 app:layout_constraintStart_toEndOf="@id/imgView"
-                app:layout_constraintTop_toBottomOf="@id/Detail_label"
+                app:layout_constraintTop_toBottomOf="@id/category_tv"
                 tools:text="This is the best back pain result of our therapy." />
 
-            <TextView
-                android:id="@+id/shareBtn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:background="@drawable/share_background"
-                android:padding="@dimen/_5sdp"
-                android:text="share"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_10sdp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/imgView"
-                app:layout_constraintTop_toBottomOf="@id/details_tv" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_alignBottom="@id/main_cl"
+            android:background="@color/view_color" />
 
     </RelativeLayout>
 </layout>

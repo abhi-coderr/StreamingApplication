@@ -33,4 +33,21 @@ you an OTP to verify your mobile number.</string>
     <string name="notification">Notification</string>
     <string name="award_gallery">Award Gallery</string>
     <string name="video_view">Video Gallery</string>
+
+    <string name="title_onboarding_1">Welcome to Testimony Application</string>
+    <string name="description_onboarding_1">Here is an media application for showing amazing results, You can find your interested testimony of physiotherapy</string>
+
+    <string name="title_onboarding_2">Filter Your Choices In Easy Way</string>
+    <string name="description_onboarding_2">We use filters on your choices for your wants. Search it in easy and simple way. Are you ready ? let\'s start now. It\'s just awesome</string>
+
+    <string name="title_onboarding_3">Explore The Real Experience</string>
+    <string name="description_onboarding_3">Let\'s feel the real experience of others journey. And share with friends to know the magic of physiotherapy</string>
+
+    <string name="start_text_advice">By continuing on this application you agree to our Terms of Use and Privacy Policy</string>
+
+    <string name="start">start</string>
+    <string name="skip">Skip</string>
+    <string name="finish">finish</string>
+    <string name="next">next</string>
+    <string name="back">back</string>
 </resources>

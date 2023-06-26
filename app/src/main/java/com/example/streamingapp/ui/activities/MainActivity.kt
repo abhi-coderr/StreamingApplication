@@ -60,8 +60,13 @@ class MainActivity : AppCompatActivity() {
         fetchTestimoniesByCategory(selectedItem.category)
     }
 
-    private val adapterTestimony by TestimonyListAdapter.getTestimonyAdapter(onShareListener = {
-        shareVideo(this@MainActivity, it.url.orEmpty(), it.detail.orEmpty())
+    private val adapterTestimony by TestimonyListAdapter.getTestimonyAdapter(onWatch = {
+//        shareVideo(this@MainActivity, it.url.orEmpty(), it.detail.orEmpty())
+        val intent = Intent(this, VideoPlayerActivity::class.java)
+        intent.putExtra("videoUrl", it.url.toString())
+        intent.putExtra("videoCategory", it.category.toString())
+        intent.putExtra("videoDetail", it.detail.toString())
+        startActivity(intent)
     })
 
     private val categoryList = listOf<TestimonyCategory>(
@@ -90,6 +95,13 @@ class MainActivity : AppCompatActivity() {
         adapter.submitList(categoryList)
 
     }
+
+    @Deprecated("Deprecated in Java")
+    override fun onBackPressed() {
+        super.onBackPressed()
+        appDialogUtil.getExitDialog().show()
+    }
+
 
     private fun setUpViewModel() = binding.apply {
 
