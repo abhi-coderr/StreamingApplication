@@ -81,6 +81,10 @@ class MainActivity : AppCompatActivity() {
 //        setUpViewModel()
         setUpBinding()
 
+        binding.customToolBar.setSafeOnClickListener {
+            startActivity(Intent(this@MainActivity, VideoPlayerActivity::class.java))
+        }
+
         fetchAllData()
 
         adapter.submitList(categoryList)
