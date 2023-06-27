@@ -10,14 +10,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#0C1830"
+        android:background="@drawable/gradient_testimony_bg"
         tools:context=".ui.activities.AwardActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/custom_tool_bar_gallery"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/theme_color"
+            android:background="@drawable/gradient_testimony_bg"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView

@@ -22,13 +22,13 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/_12sdp">
+            android:padding="@dimen/_10sdp">
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/imageView"
                 loadImageUsingGlide="@{testimonyData.url}"
-                android:layout_width="@dimen/_128sdp"
-                android:layout_height="@dimen/_128sdp"
+                android:layout_width="@dimen/_115sdp"
+                android:layout_height="@dimen/_115sdp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/normal_test_img"
                 app:layout_constraintBottom_toBottomOf="parent"

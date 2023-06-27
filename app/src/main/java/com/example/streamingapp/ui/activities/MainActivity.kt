@@ -86,10 +86,6 @@ class MainActivity : AppCompatActivity() {
 //        setUpViewModel()
         setUpBinding()
 
-        binding.customToolBar.setSafeOnClickListener {
-            startActivity(Intent(this@MainActivity, VideoPlayerActivity::class.java))
-        }
-
         fetchAllData()
 
         adapter.submitList(categoryList)
@@ -98,10 +94,12 @@ class MainActivity : AppCompatActivity() {
 
     @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
-        super.onBackPressed()
-        appDialogUtil.getExitDialog().show()
+        showExitDialog()
     }
 
+    private fun showExitDialog() {
+        appDialogUtil.getExitDialog().show()
+    }
 
     private fun setUpViewModel() = binding.apply {
 

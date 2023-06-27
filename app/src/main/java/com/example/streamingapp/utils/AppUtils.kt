@@ -1,10 +1,17 @@
 package com.example.streamingapp.utils
 
 import android.app.Activity
+import android.content.Context
 import android.os.SystemClock
 import android.view.View
+import androidx.datastore.preferences.preferencesDataStore
 import androidx.fragment.app.Fragment
 
+private val Context.prefDataStore by preferencesDataStore(
+    name = AppConstants.PREFERENCE_DATA_STORE_NAME
+)
+
+fun appPreference(context: Context) = AppPreference(context.prefDataStore)
 
 val Fragment.canOpenDialog: Boolean
     get() = requireActivity().canOpenDialog

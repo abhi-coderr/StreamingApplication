@@ -10,14 +10,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#1E376A"
+        android:background="@drawable/gradient_testimony_bg"
         tools:context=".ui.activities.VideoPlayerActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/custom_tool_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/theme_color"
+            android:background="@drawable/gradient_testimony_bg"
             android:padding="@dimen/_5sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -29,14 +29,13 @@
                 android:layout_height="@dimen/_30sdp"
                 android:layout_marginVertical="@dimen/_5sdp"
                 android:layout_marginStart="@dimen/_8sdp"
-                android:background="@drawable/sort_background"
                 android:elevation="@dimen/_5sdp"
                 android:padding="@dimen/_5sdp"
                 android:src="@drawable/ic_share"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/theme_color" />
+                app:tint="@color/white" />
 
             <TextView
                 android:layout_width="wrap_content"
