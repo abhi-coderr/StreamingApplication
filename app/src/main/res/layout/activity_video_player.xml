@@ -38,6 +38,7 @@
                 app:tint="@color/white" />
 
             <TextView
+                android:id="@+id/categoryLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_5sdp"
@@ -60,10 +61,38 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_300sdp"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/custom_tool_bar" />
+
+        <TextView
+            android:id="@+id/videoDetailTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Happy Story"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_25sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/playerView" />
+
+        <TextView
+            android:id="@+id/videoDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="Clue givers must keep their hands on the electronic tablet at all times. Clue givers cannot use a word itself, a part of a word, or a derivative form of a word, in a clue. Clue givers are also forbidden from using hand gestures. "
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/videoDetailTv" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

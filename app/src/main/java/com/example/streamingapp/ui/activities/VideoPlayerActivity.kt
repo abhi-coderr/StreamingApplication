@@ -30,9 +30,31 @@ class VideoPlayerActivity : AppCompatActivity() {
 
         Log.i("VideoPlayerCategoryAndDetail", "$category and $detail")
 
-        binding.shareBtnVideoGallery.setSafeOnClickListener {
+        setUpBinding(category.toString(), url.toString())
+        setVideoPlayer(url.toString())
+    }
+
+    // Release the player in onDestroy
+    override fun onDestroy() {
+        super.onDestroy()
+        // Release the player resources
+        player?.release()
+        player = null
+    }
+
+    private fun setUpBinding(
+        category: String,
+        url: String,
+        detail: String = "Clue givers must keep their hands on the electronic tablet at all times. Clue givers cannot use a word itself, a part of a word, or a derivative form of a word, in a clue. Clue givers are also forbidden from using hand gestures."
+    ) = binding.apply {
+        shareBtnVideoGallery.setSafeOnClickListener {
             shareVideo(this@VideoPlayerActivity, url.toString(), detail.toString())
         }
+        categoryLabel.text = category
+        videoDetail.text = detail
+    }
+
+    private fun setVideoPlayer(url: String) {
 
         // Create a SimpleExoPlayer instance
         player = SimpleExoPlayer.Builder(this).build()
@@ -47,14 +69,6 @@ class VideoPlayerActivity : AppCompatActivity() {
         // Prepare and start the player
         player?.prepare()
         player?.playWhenReady = true
-    }
-
-    // Release the player in onDestroy
-    override fun onDestroy() {
-        super.onDestroy()
-        // Release the player resources
-        player?.release()
-        player = null
     }
 
     private fun shareVideo(context: Context, videoUrl: String, videoTitle: String) {
