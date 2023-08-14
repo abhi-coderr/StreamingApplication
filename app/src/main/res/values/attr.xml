@@ -20,4 +20,11 @@
         <attr name="password_eye_image_field" format="reference" />
 
     </declare-styleable>
+
+    <declare-styleable name="CustomAnimationView">
+        <attr name="imageAssetsFolder" format="string" />
+        <attr name="animationJson" format="string" />
+        <attr name="loopInfinite" format="boolean" />
+        <attr name="startWithFadeIn" format="boolean" />
+    </declare-styleable>
 </resources>

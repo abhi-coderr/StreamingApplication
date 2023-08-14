@@ -15,8 +15,12 @@
         android:theme="@style/Theme.StreamingApp"
         tools:targetApi="31">
         <activity
-            android:name=".ui.activities.SplashScreenActivity"
-            android:exported="true">
+            android:name=".ui.activities.CategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.UpdatedSplashActivity"
+            android:exported="true"
+            android:theme="@style/AppThemeFullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,13 +28,14 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ui.activities.SplashScreenActivity"
+            android:exported="true"></activity>
+        <activity
             android:name=".ui.activities.VideoPlayerActivity"
             android:exported="false" />
         <activity
             android:name=".ui.activities.OnboardingExample1Activity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".ui.activities.OnboardingFinishActivity"
             android:exported="false" />
@@ -42,7 +47,7 @@
             android:exported="false" />
         <activity
             android:name=".ui.activities.MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

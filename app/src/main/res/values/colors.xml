@@ -327,4 +327,10 @@
     <color name="dark_grey">#333333</color>
     <color name="dark_blue">#405467</color>
 
+    <!--new sprint-->
+    <color name="abhi_primary">#0F6257</color>
+    <color name="abhi_secondary">#CDE4E1</color>
+    <color name="abhi_accent">#326341</color>
+
+
 </resources>

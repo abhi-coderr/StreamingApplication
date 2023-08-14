@@ -70,4 +70,14 @@
         <item name="android:bottomLeftRadius">@dimen/_18sdp</item>
         <item name="android:bottomRightRadius">@dimen/_18sdp</item>
     </style>
+
+    <!--Style for Full Screens-->
+    <style name="AppThemeFullScreen" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
 </resources>
