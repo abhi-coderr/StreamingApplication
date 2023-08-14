@@ -50,4 +50,5 @@ you an OTP to verify your mobile number.</string>
     <string name="finish">finish</string>
     <string name="next">next</string>
     <string name="back">back</string>
+    <string name="search_category">Needed Category</string>
 </resources>

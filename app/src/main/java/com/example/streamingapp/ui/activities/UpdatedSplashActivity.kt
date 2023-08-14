@@ -24,13 +24,14 @@ class UpdatedSplashActivity : AppCompatActivity() {
 
 
             val shouldGoToDashboard = appPreference(this@UpdatedSplashActivity).readString(
-                AppConstants.PREF_ACCESS_TOKEN)
+                AppConstants.PREF_ACCESS_TOKEN
+            )
                 .isNotBlank()
 
             if (shouldGoToDashboard) {
                 Handler().postDelayed({
                     // Intent is used to switch from one activity to another.
-                    val i = Intent(this@UpdatedSplashActivity, MainActivity::class.java)
+                    val i = Intent(this@UpdatedSplashActivity, CategoryActivity::class.java)
                     startActivity(i) // invoke the SecondActivity.
                     finish() // the current activity will get finished.
                 }, 2500)

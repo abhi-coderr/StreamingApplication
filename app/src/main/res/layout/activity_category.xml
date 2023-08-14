@@ -1,9 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.activities.CategoryActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/abhi_secondary"
+        tools:context=".ui.activities.CategoryActivity">
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/capsule_shape_background_black"
+            android:hint="@string/search_category"
+            android:paddingStart="@dimen/_54sdp"
+            android:textColor="@color/abhi_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/activity_login_constraint_shape_email"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="@drawable/bg_shadow_round_back_ground_button_wight"
+            app:layout_constraintBottom_toBottomOf="@+id/search_bar"
+            app:layout_constraintStart_toStartOf="@id/search_bar"
+            app:layout_constraintTop_toTopOf="@+id/search_bar" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:src="@drawable/ic_menu"
+            app:layout_constraintBottom_toBottomOf="@+id/activity_login_constraint_shape_email"
+            app:layout_constraintEnd_toEndOf="@+id/activity_login_constraint_shape_email"
+            app:layout_constraintStart_toStartOf="@+id/activity_login_constraint_shape_email"
+            app:layout_constraintTop_toTopOf="@+id/activity_login_constraint_shape_email"
+            app:tint="@color/abhi_secondary" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_bar"
+            tools:listitem="@layout/raw_category_item" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
