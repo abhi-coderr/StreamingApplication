@@ -30,8 +30,8 @@
                 android:layout_marginStart="@dimen/_10sdp"
                 android:text="@{categories.category}"
                 android:textColor="@color/abhi_primary"
-                android:textSize="@dimen/_14sdp"
-                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/category_in"
                 app:layout_constraintStart_toStartOf="parent"
@@ -40,8 +40,8 @@
 
             <ImageView
                 android:id="@+id/category_in"
-                android:layout_width="@dimen/_18sdp"
-                android:layout_height="@dimen/_18sdp"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_14sdp"
                 android:layout_marginEnd="@dimen/_8sdp"
                 android:src="@drawable/ic_next"
                 app:layout_constraintBottom_toBottomOf="parent"
