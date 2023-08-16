@@ -10,13 +10,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/abhi_secondary">
+        android:background="@color/abhi_secondary"
+        tools:context=".ui.activities.CategoryActivity">
 
         <EditText
             android:id="@+id/search_bar"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_48sdp"
-            android:layout_marginHorizontal="@dimen/_3sdp"
+            android:layout_marginHorizontal="@dimen/_13sdp"
             android:layout_marginTop="@dimen/_8sdp"
             android:background="@drawable/capsule_shape_background_black"
             android:hint="@string/search_category"
@@ -53,6 +54,7 @@
             android:layout_height="0dp"
             android:layout_marginHorizontal="@dimen/_15sdp"
             android:layout_marginTop="@dimen/_15sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/search_bar"
             tools:listitem="@layout/raw_category_item" />

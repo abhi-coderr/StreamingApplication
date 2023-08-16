@@ -31,7 +31,7 @@ class UpdatedSplashActivity : AppCompatActivity() {
             if (shouldGoToDashboard) {
                 Handler().postDelayed({
                     // Intent is used to switch from one activity to another.
-                    val i = Intent(this@UpdatedSplashActivity, CategoryActivity::class.java)
+                    val i = Intent(this@UpdatedSplashActivity, DashboardActivity::class.java)
                     startActivity(i) // invoke the SecondActivity.
                     finish() // the current activity will get finished.
                 }, 2500)
