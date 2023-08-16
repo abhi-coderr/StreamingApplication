@@ -32,7 +32,7 @@
             android:id="@+id/activity_login_constraint_shape_email"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
-            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_3sdp"
             android:layout_marginTop="@dimen/_3sdp"
             android:layout_marginBottom="@dimen/_3sdp"
             android:background="@drawable/bg_shadow_round_back_ground_button_wight"
