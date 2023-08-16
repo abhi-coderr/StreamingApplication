@@ -6,8 +6,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class TestimonyCategory(
-
     val id: Int,
-    val category: String
-
+    val category: String,
+    val img: String? = ""
 ) : Parcelable, CheckableDataClass()

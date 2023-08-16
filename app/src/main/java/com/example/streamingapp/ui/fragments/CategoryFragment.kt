@@ -20,14 +20,46 @@ class CategoryFragment : Fragment() {
     private lateinit var binding: FragmentCategoryBinding
 
     private val categoryList = listOf(
-        TestimonyCategory(1, "Back Pain"),
-        TestimonyCategory(2, "Acidity"),
-        TestimonyCategory(3, "Allergy"),
-        TestimonyCategory(4, "Alzheimer"),
-        TestimonyCategory(5, "Ankle"),
-        TestimonyCategory(6, "Heart Disease"),
-        TestimonyCategory(7, "Knee Pain"),
-        TestimonyCategory(9, "Others")
+        TestimonyCategory(
+            1,
+            "Back Pain",
+            "https://images.pexels.com/photos/7298685/pexels-photo-7298685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        ),
+        TestimonyCategory(
+            2,
+            "Acidity",
+            "https://images.pexels.com/photos/14569658/pexels-photo-14569658.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        ),
+        TestimonyCategory(
+            3,
+            "Allergy",
+            "https://images.pexels.com/photos/9882204/pexels-photo-9882204.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        ),
+        TestimonyCategory(
+            4,
+            "Alzheimer",
+            "https://images.pexels.com/photos/7551606/pexels-photo-7551606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        ),
+        TestimonyCategory(
+            5,
+            "Ankle",
+            "https://images.pexels.com/photos/7298407/pexels-photo-7298407.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        ),
+        TestimonyCategory(
+            6,
+            "Heart Disease",
+            "https://images.pexels.com/photos/4058242/pexels-photo-4058242.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        ),
+        TestimonyCategory(
+            7,
+            "Knee Pain",
+            "https://images.pexels.com/photos/7339492/pexels-photo-7339492.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        ),
+        TestimonyCategory(
+            9,
+            "Others",
+            "https://images.pexels.com/photos/3873188/pexels-photo-3873188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        )
     )
 
     private val categoryAdapter by CategoryListAdapter.getCategoryAdapter()
