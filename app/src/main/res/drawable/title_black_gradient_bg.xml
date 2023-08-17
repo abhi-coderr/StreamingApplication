@@ -6,6 +6,8 @@
         android:endColor="@android:color/transparent"
         android:startColor="@color/black" />
 
-    <corners android:radius="@dimen/_15sdp" />
+    <corners
+        android:bottomLeftRadius="@dimen/_15sdp"
+        android:bottomRightRadius="@dimen/_15sdp" />
 
 </shape>

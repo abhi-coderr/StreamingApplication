@@ -1,5 +1,6 @@
 package com.example.streamingapp.ui.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -11,7 +12,10 @@ import androidx.fragment.app.Fragment
 import com.example.streamingapp.R
 import com.example.streamingapp.data.model.response.TestimonyCategory
 import com.example.streamingapp.databinding.FragmentCategoryBinding
+import com.example.streamingapp.ui.activities.DiseaseVideoActivity
+import com.example.streamingapp.ui.activities.VideoPlayerActivity
 import com.example.streamingapp.ui.components.adapter.CategoryListAdapter
+import com.example.streamingapp.utils.AppConstants.CATEGORY_FRAGMENT_CATEGORY_NAME
 import java.util.Locale
 
 
@@ -48,7 +52,7 @@ class CategoryFragment : Fragment() {
         TestimonyCategory(
             6,
             "Heart Disease",
-            "https://images.pexels.com/photos/4058242/pexels-photo-4058242.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            "https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         ),
         TestimonyCategory(
             7,
@@ -57,12 +61,14 @@ class CategoryFragment : Fragment() {
         ),
         TestimonyCategory(
             9,
-            "Others",
+            "First Category",
             "https://images.pexels.com/photos/3873188/pexels-photo-3873188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         )
     )
 
-    private val categoryAdapter by CategoryListAdapter.getCategoryAdapter()
+    private val categoryAdapter by CategoryListAdapter.getCategoryAdapter { category ->
+        sendCategory(category)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -98,5 +104,10 @@ class CategoryFragment : Fragment() {
         binding.recyclerView.adapter = categoryAdapter
     }
 
+    private fun sendCategory(category: String) {
+        val intent = Intent(requireContext(), DiseaseVideoActivity::class.java)
+        intent.putExtra(CATEGORY_FRAGMENT_CATEGORY_NAME, category)
+        startActivity(intent)
+    }
 
 }
