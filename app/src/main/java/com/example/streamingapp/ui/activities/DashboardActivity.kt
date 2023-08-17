@@ -20,7 +20,7 @@ class DashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_dashboard)
-        window.statusBarColor = R.color.abhi_secondary
+        window.statusBarColor = R.color.white
         setUpViewPager()
 
     }
