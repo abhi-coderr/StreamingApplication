@@ -9,13 +9,14 @@ import com.example.streamingapp.databinding.ActivityDashboardBinding
 import com.example.streamingapp.ui.components.adapter.TabPagerAdapter
 import com.example.streamingapp.ui.fragments.AwardsFragment
 import com.example.streamingapp.ui.fragments.CategoryFragment
+import com.example.streamingapp.utils.AppDialogUtils
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
 class DashboardActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDashboardBinding
-
+    private val appDialogUtil = AppDialogUtils(this)
     @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +24,15 @@ class DashboardActivity : AppCompatActivity() {
         window.statusBarColor = R.color.white
         setUpViewPager()
 
+    }
+
+    @Deprecated("Deprecated in Java")
+    override fun onBackPressed() {
+        showExitDialog()
+    }
+
+    private fun showExitDialog() {
+        appDialogUtil.getExitDialog().show()
     }
 
     private fun setUpViewPager() = binding.apply {

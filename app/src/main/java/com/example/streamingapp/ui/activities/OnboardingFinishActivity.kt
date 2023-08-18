@@ -18,7 +18,7 @@ class OnboardingFinishActivity : AppCompatActivity() {
         setContentView(view)
         btnStart = binding.layoutStart
         btnStart.setOnClickListener {
-            startActivity(Intent(this@OnboardingFinishActivity, MainActivity::class.java))
+            startActivity(Intent(this@OnboardingFinishActivity, DashboardActivity::class.java))
             finishAffinity()
         }
     }
