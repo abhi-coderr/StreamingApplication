@@ -12,6 +12,7 @@ import com.example.streamingapp.utils.setSafeOnClickListener
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.SimpleExoPlayer
+import java.lang.Exception
 
 class VideoPlayerActivity : AppCompatActivity() {
 
@@ -30,7 +31,9 @@ class VideoPlayerActivity : AppCompatActivity() {
 
         Log.i("VideoPlayerCategoryAndDetail", "$category and $detail")
 
-        setUpBinding(category.toString(), url.toString())
+        if (detail != null) {
+            setUpBinding(category.toString(), url.toString(), detail)
+        }
         setVideoPlayer(url.toString())
     }
 
@@ -45,7 +48,7 @@ class VideoPlayerActivity : AppCompatActivity() {
     private fun setUpBinding(
         category: String,
         url: String,
-        detail: String = "Clue givers must keep their hands on the electronic tablet at all times. Clue givers cannot use a word itself, a part of a word, or a derivative form of a word, in a clue. Clue givers are also forbidden from using hand gestures."
+        detail: String
     ) = binding.apply {
         shareBtnVideoGallery.setSafeOnClickListener {
             shareVideo(this@VideoPlayerActivity, url.toString(), detail.toString())
@@ -56,19 +59,24 @@ class VideoPlayerActivity : AppCompatActivity() {
 
     private fun setVideoPlayer(url: String) {
 
-        // Create a SimpleExoPlayer instance
-        player = SimpleExoPlayer.Builder(this).build()
+        try {
+            // Create a SimpleExoPlayer instance
+            player = SimpleExoPlayer.Builder(this).build()
 
 
-        binding.playerView.player = player
-        // Set the media source for the player
-        val mediaItem =
-            MediaItem.fromUri(url.toString())
-        player?.setMediaItem(mediaItem)
+            binding.playerView.player = player
+            // Set the media source for the player
+            val mediaItem =
+                MediaItem.fromUri(url.toString())
+            player?.setMediaItem(mediaItem)
 
-        // Prepare and start the player
-        player?.prepare()
-        player?.playWhenReady = true
+            // Prepare and start the player
+            player?.prepare()
+            player?.playWhenReady = true
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
     }
 
     private fun shareVideo(context: Context, videoUrl: String, videoTitle: String) {

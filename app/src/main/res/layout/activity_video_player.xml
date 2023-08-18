@@ -10,14 +10,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gradient_testimony_bg"
+        android:background="@color/abhi_secondary"
         tools:context=".ui.activities.VideoPlayerActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/custom_tool_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/gradient_testimony_bg"
+            android:background="@color/abhi_secondary"
             android:padding="@dimen/_5sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +35,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:tint="@color/abhi_primary" />
 
             <TextView
                 android:id="@+id/categoryLabel"
@@ -47,7 +47,7 @@
                 android:padding="@dimen/_5sdp"
                 android:text="@string/video_view"
                 android:textAlignment="textStart"
-                android:textColor="@color/theme_color"
+                android:textColor="@color/abhi_accent"
                 android:textSize="@dimen/_15sdp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -60,6 +60,7 @@
             android:id="@+id/playerView"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_300sdp"
+            android:background="@color/black"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +73,7 @@
             android:layout_marginStart="@dimen/_5sdp"
             android:layout_marginTop="@dimen/_5sdp"
             android:text="Happy Story"
-            android:textColor="@color/white"
+            android:textColor="@color/abhi_primary"
             android:textSize="@dimen/_25sdp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -85,13 +86,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_15sdp"
             android:layout_marginTop="@dimen/_15sdp"
-            android:text="Clue givers must keep their hands on the electronic tablet at all times. Clue givers cannot use a word itself, a part of a word, or a derivative form of a word, in a clue. Clue givers are also forbidden from using hand gestures. "
-            android:textColor="@color/white"
+            android:textColor="@color/abhi_accent"
             android:textSize="@dimen/_15sdp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/videoDetailTv" />
+            app:layout_constraintTop_toBottomOf="@id/videoDetailTv"
+            tools:text="Clue givers must keep their hands on the electronic tablet at all times. Clue givers cannot use a word itself, a part of a word, or a derivative form of a word, in a clue. Clue givers are also forbidden from using hand gestures. " />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

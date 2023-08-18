@@ -2,6 +2,7 @@ package com.example.streamingapp.ui.activities
 
 import android.app.AlertDialog
 import android.app.Dialog
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,7 @@ import android.util.Log
 import android.view.Window
 import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.lifecycleScope
 import com.airbnb.lottie.LottieAnimationView
 import com.airbnb.lottie.LottieDrawable
 import com.example.streamingapp.R
@@ -33,22 +35,27 @@ class DiseaseVideoActivity : AppCompatActivity() {
 
     private val testimonies: MutableList<Testimony> = mutableListOf()
 
-    private val diseaseAdapter by DiseaseListAdapter.getDiseaseVideoAdapter()
+    private val diseaseAdapter by DiseaseListAdapter.getDiseaseVideoAdapter(this){
+        val intent = Intent(this, VideoPlayerActivity::class.java)
+        intent.putExtra("videoUrl", it.url.toString())
+        intent.putExtra("videoCategory", it.category.toString())
+        intent.putExtra("videoDetail", it.detail.toString())
+        startActivity(intent)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_disease_video)
 
         val categoryName = intent.getStringExtra(CATEGORY_FRAGMENT_CATEGORY_NAME)
-
+        setUpBinding()
         categoryName?.let { name ->
-            setUpBinding(name)
             fetchTestimoniesByCategory(name)
         }
+        this.lifecycleScope
     }
 
-    private fun setUpBinding(name: String) = binding.apply {
-        categoryName.text = name
+    private fun setUpBinding() = binding.apply {
         diseaseRv.adapter = diseaseAdapter
     }
 

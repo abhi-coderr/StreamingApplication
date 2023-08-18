@@ -9,12 +9,16 @@
             name="testimonyData"
             type="com.example.streamingapp.data.model.adapteritemlist.TestimonyListItem" />
 
+        <variable
+            name="time"
+            type="String" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_10sdp"
         tools:background="@color/abhi_secondary">
 
         <com.google.android.material.imageview.ShapeableImageView
@@ -22,14 +26,40 @@
             loadImageUsingGlide="@{testimonyData.url}"
             android:layout_width="0dp"
             android:layout_height="@dimen/_170sdp"
-            android:layout_marginHorizontal="@dimen/_18sdp"
             android:layout_marginTop="@dimen/_5sdp"
             android:scaleType="centerCrop"
             android:src="@drawable/cake"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearanceOverlay="@style/ImageShapeLowCurve" />
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/labelTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="Detail"
+            android:textColor="@color/abhi_accent"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/videoImg"
+            app:layout_constraintTop_toBottomOf="@id/videoImg"
+            tools:text="Detail" />
+
+        <TextView
+            android:id="@+id/descriptionTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:text="@{testimonyData.detail}"
+            android:textAlignment="textStart"
+            android:textColor="@color/abhi_primary"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/labelTV"
+            app:layout_constraintTop_toBottomOf="@id/labelTV"
+            tools:text="13 min" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
@@ -43,7 +73,7 @@
 
             <ImageView
                 android:layout_width="@dimen/_18sdp"
-                android:layout_height="0dp"
+                android:layout_height="@dimen/_15sdp"
                 android:padding="@dimen/_3sdp"
                 android:src="@drawable/ic_play"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -55,12 +85,14 @@
                 android:id="@+id/timeTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="13 min"
+                android:text="@{time}"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_10sdp"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="13 min" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

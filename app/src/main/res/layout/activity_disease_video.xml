@@ -13,14 +13,28 @@
         android:background="@color/abhi_secondary"
         tools:context=".ui.activities.DiseaseVideoActivity">
 
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/category_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="this category"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginStart="@dimen/_15sdp"
+            android:text="Explore category"
+            android:textColor="@color/abhi_accent"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/backBtn"
+            app:layout_constraintStart_toEndOf="@id/backBtn"
+            app:layout_constraintTop_toTopOf="@id/backBtn" />
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/no_data_anim"
@@ -38,9 +52,10 @@
             android:id="@+id/disease_rv"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/category_name" />
+            app:layout_constraintTop_toBottomOf="@id/backBtn" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
