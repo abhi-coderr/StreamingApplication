@@ -44,9 +44,9 @@
         <ImageView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:padding="@dimen/_5sdp"
+            android:padding="@dimen/_7sdp"
             android:paddingHorizontal="@dimen/_10sdp"
-            android:src="@drawable/ic_menu"
+            android:src="@drawable/magnifine"
             app:layout_constraintBottom_toBottomOf="@+id/activity_login_constraint_shape_email"
             app:layout_constraintEnd_toEndOf="@+id/activity_login_constraint_shape_email"
             app:layout_constraintStart_toStartOf="@+id/activity_login_constraint_shape_email"

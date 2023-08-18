@@ -20,6 +20,7 @@ import com.example.streamingapp.data.model.response.Testimony
 import com.example.streamingapp.databinding.ActivityDiseaseVideoBinding
 import com.example.streamingapp.ui.components.adapter.DiseaseListAdapter
 import com.example.streamingapp.utils.AppConstants.CATEGORY_FRAGMENT_CATEGORY_NAME
+import com.example.streamingapp.utils.setSafeOnClickListener
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -35,7 +36,7 @@ class DiseaseVideoActivity : AppCompatActivity() {
 
     private val testimonies: MutableList<Testimony> = mutableListOf()
 
-    private val diseaseAdapter by DiseaseListAdapter.getDiseaseVideoAdapter(this){
+    private val diseaseAdapter by DiseaseListAdapter.getDiseaseVideoAdapter(this) {
         val intent = Intent(this, VideoPlayerActivity::class.java)
         intent.putExtra("videoUrl", it.url.toString())
         intent.putExtra("videoCategory", it.category.toString())
@@ -57,6 +58,9 @@ class DiseaseVideoActivity : AppCompatActivity() {
 
     private fun setUpBinding() = binding.apply {
         diseaseRv.adapter = diseaseAdapter
+        backBtn.setSafeOnClickListener {
+            onBackPressed()
+        }
     }
 
     private fun fetchTestimoniesByCategory(targetCategory: String) {

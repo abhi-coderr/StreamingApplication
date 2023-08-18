@@ -29,31 +29,6 @@ object DiseaseListAdapter {
                     root.setSafeOnClickListener {
                         onWatch.invoke(item)
                     }
-                    GlobalScope.launch(Dispatchers.IO) {
-                        val retriever = MediaMetadataRetriever()
-
-                        try {
-                            retriever.setDataSource(item.url, HashMap())
-                            val durationString = retriever.extractMetadata(
-                                MediaMetadataRetriever.METADATA_KEY_DURATION
-                            )
-                            val durationInMillis = durationString?.toLong() ?: 0
-
-                            val durationInMinutes =
-                                TimeUnit.MILLISECONDS.toMinutes(durationInMillis)
-
-                            time = "$durationInMinutes minute"
-
-                            // Now you can use the 'durationInMinutes' value as needed
-                            // For example, display it in a TextView
-                            // durationTextView.text = "Duration: $durationInMinutes minutes"
-
-                        } catch (e: IOException) {
-                            e.printStackTrace()
-                        } finally {
-                            retriever.release()
-                        }
-                    }
                 }
             },
             isSameItems = { oldItem, newItem -> oldItem.id == newItem.id },

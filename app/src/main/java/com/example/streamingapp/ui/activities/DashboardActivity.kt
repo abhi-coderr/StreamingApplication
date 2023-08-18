@@ -17,6 +17,7 @@ class DashboardActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDashboardBinding
     private val appDialogUtil = AppDialogUtils(this)
+
     @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,7 +45,7 @@ class DashboardActivity : AppCompatActivity() {
         TabLayoutMediator(tabLayout, viewPager) { tab: TabLayout.Tab, position: Int ->
             when (position) {
                 0 -> tab.text = "Category"
-                1 -> tab.text = "Awards"
+                1 -> tab.text = "Gallery"
             }
         }.attach()
     }

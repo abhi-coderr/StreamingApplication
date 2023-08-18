@@ -47,7 +47,7 @@ class OnboardingExample1Activity : AppCompatActivity() {
         textSkip.setOnClickListener {
             finish()
             val intent =
-                Intent(applicationContext, OnboardingFinishActivity::class.java)
+                Intent(applicationContext, DashboardActivity::class.java)
             startActivity(intent)
             Animatoo.animateSlideLeft(this)
         }
@@ -58,7 +58,7 @@ class OnboardingExample1Activity : AppCompatActivity() {
             if (getItem() > mViewPager.childCount) {
                 finish()
                 val intent =
-                    Intent(applicationContext, OnboardingFinishActivity::class.java)
+                    Intent(applicationContext, DashboardActivity::class.java)
                 startActivity(intent)
                 Animatoo.animateSlideLeft(this)
             } else {

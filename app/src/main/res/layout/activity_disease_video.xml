@@ -17,11 +17,12 @@
             android:id="@+id/backBtn"
             android:layout_width="@dimen/_18sdp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_15sdp"
             android:src="@drawable/ic_back"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/abhi_primary" />
 
         <TextView
             android:id="@+id/category_name"
@@ -30,7 +31,7 @@
             android:layout_marginStart="@dimen/_15sdp"
             android:text="Explore category"
             android:textColor="@color/abhi_accent"
-            android:textSize="@dimen/_18sdp"
+            android:textSize="@dimen/_15sdp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/backBtn"
             app:layout_constraintStart_toEndOf="@id/backBtn"
