@@ -129,7 +129,7 @@ class DiseaseVideoActivity : AppCompatActivity() {
             /**
              * Setting up the animation type.
              */
-            setAnimation("not_found.json")
+            setAnimation("abhi_third_loader.json")
             /**
              * Setting up the repeat count.
              */

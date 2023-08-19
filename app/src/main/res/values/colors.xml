@@ -332,5 +332,7 @@
     <color name="abhi_secondary">#CDE4E1</color>
     <color name="abhi_accent">#326341</color>
 
-
+<!--    <color name="abhi_primary">#1E398F</color>-->
+<!--    <color name="abhi_secondary">#D4C8F3</color>-->
+<!--    <color name="abhi_accent">#B31E398F</color>-->
 </resources>
