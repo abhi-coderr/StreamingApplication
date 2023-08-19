@@ -73,6 +73,7 @@ class VideoPlayerActivity : AppCompatActivity() {
             // Prepare and start the player
             player?.prepare()
             player?.playWhenReady = true
+
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -87,6 +88,12 @@ class VideoPlayerActivity : AppCompatActivity() {
             "Check out this amazing experience testimony: $videoTitle\n\n$videoUrl"
         )
         context.startActivity(Intent.createChooser(shareIntent, "Share Video"))
+    }
+
+    override fun onPause() {
+        super.onPause()
+        binding.playerView.player = player
+        player?.pause()
     }
 
 }

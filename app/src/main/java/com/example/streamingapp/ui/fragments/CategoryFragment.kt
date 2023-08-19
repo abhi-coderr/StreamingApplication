@@ -89,10 +89,11 @@ class CategoryFragment : Fragment() {
                 if (query.isEmpty()) {
                     categoryAdapter.submitList(categoryList)
                 } else {
-                    val filteredList = categoryAdapter.currentList.filter {
-                        it.category.toLowerCase(Locale.ROOT)
-                            .contains(query.toLowerCase(Locale.ROOT))
-                    }
+//                    val filteredList = categoryAdapter.currentList.filter {
+//                        it.category.toLowerCase(Locale.ROOT)
+//                            .contains(query.toLowerCase(Locale.ROOT))
+//                    }
+                    val  filteredList = categoryAdapter.currentList.filter { it.category.contains(query, ignoreCase = true) }
                     categoryAdapter.submitList(filteredList)
                 }
             }
